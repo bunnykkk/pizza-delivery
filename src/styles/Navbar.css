@@ -1,0 +1,21 @@
+#navbar {
+  position: absolute;
+  background: transparent;
+}
+
+#logo-nav {
+  position: absolute;
+  left: 16.21%;
+  right: 79.42%;
+  top: 27.27%;
+  bottom: 56.82%;
+}
+
+#logo-m {
+  color: green;
+}
+
+.nav-btn:hover {
+  color: red;
+  transition: 0.7;
+}
