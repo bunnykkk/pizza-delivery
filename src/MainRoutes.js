@@ -7,6 +7,12 @@ import AdminPage from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
+import ProfilePage from "./pages/ProfilePage";
+import MenuPage from "./pages/MenuPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactPage from "./pages/ContactsPage";
+import SuggestionsPage from "./pages/SuggestionsPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -44,6 +50,36 @@ const MainRoutes = () => {
       link: "/product",
       element: <ProductPage />,
       id: 7,
+    },
+    {
+      link: "/cart",
+      element: <CartPage />,
+      id: 8,
+    },
+    {
+      link: "/profile",
+      element: <ProfilePage />,
+      id: 9,
+    },
+    {
+      link: "/menu",
+      element: <MenuPage />,
+      id: 10,
+    },
+    {
+      link: "/about",
+      element: <AboutUsPage />,
+      id: 11,
+    },
+    {
+      link: "/contact",
+      element: <ContactPage />,
+      id: 12,
+    },
+    {
+      link: "/suggestions",
+      element: <SuggestionsPage />,
+      id: 13,
     },
   ];
 
