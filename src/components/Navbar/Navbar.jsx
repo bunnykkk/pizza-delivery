@@ -18,8 +18,43 @@ import "../../styles/Navbar.css";
 import ellipse from "../../img/Ellipse.svg";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Меню", "О нас", "Контакты", "Предложения"];
-const settings = ["Кабинет", "Регистрация", "Логин", "Выход"];
+const pages = [
+  {
+    type: "Меню",
+    path: "/menu",
+  },
+  {
+    type: "О нас",
+    path: "/about",
+  },
+  {
+    type: "Контакты",
+    path: "/contact",
+  },
+  {
+    type: "Предложения",
+    path: "/suggestions",
+  },
+];
+
+const settings = [
+  {
+    type: "Кабинет",
+    path: "/profile",
+  },
+  {
+    type: "Регистрация",
+    path: "/register",
+  },
+  {
+    type: "Логин",
+    path: "/login",
+  },
+  {
+    type: "Выход",
+    path: "/",
+  },
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -100,8 +135,12 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}>
               {pages.map(page => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.type} onClick={handleCloseNavMenu}>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => navigate(page.path)}>
+                    {page.type}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -127,10 +166,10 @@ function ResponsiveAppBar() {
             {pages.map(page => (
               <Button
                 className="nav-btn"
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.type}
+                onClick={() => navigate(page.path)}
                 sx={{ my: 2, color: "white", display: "block" }}>
-                {page}
+                {page.type}
               </Button>
             ))}
           </Box>
@@ -163,8 +202,12 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}>
               {settings.map(setting => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.type} onClick={handleCloseUserMenu}>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => navigate(setting.path)}>
+                    {setting.type}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
