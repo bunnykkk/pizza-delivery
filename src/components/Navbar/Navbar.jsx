@@ -102,12 +102,13 @@ function ResponsiveAppBar() {
           </Typography>
           <img id="logo-nav" src={ellipse} alt="" />
           <Box
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: "flex",
+                md: "none",
+              },
+            }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -162,7 +163,15 @@ function ResponsiveAppBar() {
             }}>
             <span id="logo-m">M</span>omento
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: "none",
+                md: "flex",
+                justifyContent: "space-evenly",
+              },
+            }}>
             {pages.map(page => (
               <Button
                 className="nav-btn"
