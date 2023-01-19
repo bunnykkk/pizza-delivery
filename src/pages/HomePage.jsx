@@ -5,7 +5,8 @@ import "../styles/HomePage.css";
 const HomePage = () => {
   return (
     <>
-      <img className="background" src={rectangle} alt="" />
+      {" "}
+      <img className="background" src={rectangle} alt="" />{" "}
     </>
   );
 };
