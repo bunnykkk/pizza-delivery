@@ -60,10 +60,10 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = event => {
+  const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = event => {
+  const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -82,39 +82,55 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" id="navbar">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            className="italic-text"
-            variant="h3"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              ml: 5,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Italiana",
-              fontWeight: 500,
-              color: "inherit",
-              textDecoration: "none",
-            }}>
-            <span id="logo-m">M</span>omento
-          </Typography>
-          <img id="logo-nav" src={ellipse} alt="" />
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Box>
+            <Typography
+              className="italic-text"
+              variant="h3"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                ml: 5,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "Italiana",
+                fontWeight: 500,
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              <span id="logo-m">M</span>omento
+            </Typography>
+            <img id="logo-nav" src={ellipse} alt="" />
+          </Box>
+
           <Box
             style={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
             }}
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            sx={{
+              flexGrow: 1,
+              display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit">
+              color="inherit"
+            >
               <MenuIcon />
             </IconButton>
             <Menu
@@ -133,12 +149,14 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
-              }}>
-              {pages.map(page => (
+              }}
+            >
+              {pages.map((page) => (
                 <MenuItem key={page.type} onClick={handleCloseNavMenu}>
                   <Typography
                     textAlign="center"
-                    onClick={() => navigate(page.path)}>
+                    onClick={() => navigate(page.path)}
+                  >
                     {page.type}
                   </Typography>
                 </MenuItem>
@@ -159,16 +177,18 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               color: "inherit",
               textDecoration: "none",
-            }}>
+            }}
+          >
             <span id="logo-m">M</span>omento
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map(page => (
+            {pages.map((page) => (
               <Button
                 className="nav-btn"
                 key={page.type}
                 onClick={() => navigate(page.path)}
-                sx={{ my: 2, color: "white", display: "block" }}>
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
                 {page.type}
               </Button>
             ))}
@@ -200,12 +220,14 @@ function ResponsiveAppBar() {
                 horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}>
-              {settings.map(setting => (
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
                 <MenuItem key={setting.type} onClick={handleCloseUserMenu}>
                   <Typography
                     textAlign="center"
-                    onClick={() => navigate(setting.path)}>
+                    onClick={() => navigate(setting.path)}
+                  >
                     {setting.type}
                   </Typography>
                 </MenuItem>
