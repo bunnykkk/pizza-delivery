@@ -82,33 +82,35 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" id="navbar">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            className="italic-text"
-            variant="h3"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              ml: 5,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Italiana",
-              fontWeight: 500,
-              color: "inherit",
-              textDecoration: "none",
-            }}>
-            <span id="logo-m">M</span>omento
-          </Typography>
-          <img id="logo-nav" src={ellipse} alt="" />
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: {
-                xs: "flex",
-                md: "none",
-              },
-            }}>
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}>
+          <Box>
+            <Typography
+              className="italic-text"
+              variant="h3"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                ml: 5,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "Italiana",
+                fontWeight: 500,
+                color: "inherit",
+                textDecoration: "none",
+              }}>
+              <span id="logo-m">M</span>omento
+            </Typography>
+            <img id="logo-nav" src={ellipse} alt="" />
+          </Box>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
