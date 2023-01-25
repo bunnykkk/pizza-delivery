@@ -40,8 +40,8 @@
   position: absolute;
   width: 687.87px;
   height: 697.5px;
-  left: 671px;
-  top: 151px;
+  left: 110vh;
+  top: 20vh;
 }
 @media all and (max-width: 1024px) {
   .h1_home {
