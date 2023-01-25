@@ -2,5 +2,135 @@
   width: 100%;
   height: 964px;
   left: 0px;
-  top: -1px;
+  top: -2px;
+}
+.homepage {
+  width: 100%;
+}
+.homet {
+  margin-left: 72px;
+  position: absolute;
+  top: 272px;
+  color: rgba(247, 247, 247, 0.7);
+}
+.h1_home {
+  font-family: "Squada One";
+  font-size: 50px;
+}
+.h3_home {
+  font-family: "Arial";
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 200;
+}
+.btn_home {
+  width: 192px;
+  height: 59px;
+  background-color: #9c1414;
+  border: #9c1414;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.btn_home:hover {
+  background-color: #d71919;
+}
+.homeblock {
+  position: absolute;
+  width: 687.87px;
+  height: 697.5px;
+  left: 110vh;
+  top: 20vh;
+}
+@media all and (max-width: 1024px) {
+  .h1_home {
+    font-size: 40px;
+  }
+  .h3_home {
+    font-size: 28px;
+  }
+  .homeblock {
+    left: 400px;
+    width: 600px;
+  }
+  .mainhome_img {
+    width: 600px;
+    height: 650px;
+  }
+}
+@media all and (max-width: 768px) {
+  .h1_home {
+    font-size: 34px;
+  }
+  .h3_home {
+    font-size: 22px;
+  }
+  .btn_home {
+    width: 165px;
+  }
+  .homeblock {
+    left: 360px;
+    width: 400px;
+  }
+  .mainhome_img {
+    width: 400px;
+    height: 500px;
+  }
+}
+@media all and (max-width: 425px) {
+  .homet {
+    top: 27%;
+    margin-left: 3%;
+  }
+  .h1_home {
+    font-size: 36px;
+  }
+  .h3_home {
+    font-size: 22px;
+  }
+  .btn_home {
+    margin-top: 185%;
+    margin-left: 35%;
+  }
+  .homeblock {
+    width: 343px;
+    height: 331px;
+    left: 16px;
+    top: 311px;
+  }
+}
+@media all and (max-width: 375px) {
+  .btn_home {
+    margin-top: 185%;
+    margin-left: 35%;
+  }
+  .homeblock {
+    width: 200px;
+    height: 331px;
+    left: -5px;
+    top: 311px;
+  }
+  .mainhome_img {
+    width: 380px;
+  }
+}
+@media all and (max-width: 320px) {
+  .h1_home {
+    font-size: 32px;
+  }
+  .h3_home {
+    font-size: 22px;
+  }
+  .homeblock {
+    left: 10px;
+  }
+  .mainhome_img {
+    width: 280px;
+    height: 320px;
+  }
+  .btn_home {
+    margin-top: 160%;
+    margin-left: 26%;
+  }
 }

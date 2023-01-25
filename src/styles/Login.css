@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-
   max-width: 100%;
 }
 
@@ -90,8 +89,7 @@ input::-webkit-inner-spin-button {
 
 .login_img img {
   max-width: 100%;
-  margin-left: 5%;
-  margin-top: 20%;
+  margin-left: 4%;
 }
 
 .form_inp__shortplaceholder {

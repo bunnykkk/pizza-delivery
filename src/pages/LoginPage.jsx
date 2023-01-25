@@ -105,14 +105,9 @@ const LoginPage = () => {
               sx={{
                 fontFamily: "Montserrat",
                 color: "white",
-                fontSize: {
-                  xl: "24px",
-                  lg: "23px",
-                  md: "16px",
-                  sm: "16px",
-                  marginTop: "40%",
-                },
+                fontSize: { xl: "24px", lg: "23px", md: "16px", sm: "16px" },
                 textAlign: "justify",
+                marginTop: "40%",
               }}>
               В личном кабинете будут отображаться скидки и промо-коды, которые
               мы дарим на различные празники и дни рождения
