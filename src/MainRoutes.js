@@ -13,6 +13,7 @@ import MenuPage from "./pages/MenuPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactsPage";
 import SuggestionsPage from "./pages/SuggestionsPage";
+import EmptyCartPage from "./pages/EmptyCartPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -80,6 +81,11 @@ const MainRoutes = () => {
       link: "/suggestions",
       element: <SuggestionsPage />,
       id: 13,
+    },
+    {
+      link: "/emptycard",
+      element: <EmptyCartPage />,
+      id: 14,
     },
   ];
 
