@@ -39,12 +39,8 @@ const pages = [
 
 const settings = [
   {
-    type: "Кабинет",
+    type: "Личный кабинет",
     path: "/profile",
-  },
-  {
-    type: "Регистрация",
-    path: "/register",
   },
   {
     type: "Логин",
