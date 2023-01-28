@@ -14,6 +14,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactsPage";
 import SuggestionsPage from "./pages/SuggestionsPage";
 import EmptyCartPage from "./pages/EmptyCartPage";
+import SuccessfulOrderPage from "./pages/SuccessfulOrderPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -83,9 +84,14 @@ const MainRoutes = () => {
       id: 13,
     },
     {
-      link: "/emptycard",
+      link: "/emptycart",
       element: <EmptyCartPage />,
       id: 14,
+    },
+    {
+      link: "/successorder",
+      element: <SuccessfulOrderPage />,
+      id: 15,
     },
   ];
 
